@@ -42,7 +42,7 @@ public class ExpressionEvaluator {
         }
         String expression = this.calculatePostFixedForm();
         this.result = new StringBuilder();
-        System.out.println(expression);
+        System.out.println("Postfixed form: " + expression);
         int i = 0, aux1, aux2;
         while (i < expression.length()) {
             char currentValue = expression.charAt(i);

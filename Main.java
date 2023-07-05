@@ -14,15 +14,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ExpressionEvaluator calculator = new ExpressionEvaluator("0");
         String exp;
-        System.out.println("""
-                Valorile trebuie sa contina o singura cifra, operatii permise: +,-,*,/,^
-                ex: 3 + (2 - 5) - 1");
+        System.out.println(" Valorile trebuie sa contina o singura cifra, operatii permise: +,-,*,/,^ " +
+                "ex: 3 + (2 - 5) - 1");
 
         do {
             System.out.println("Introduceti expresia: ");
             exp = getExpression(sc);
             calculator.setInput(exp);
-            System.out.println(calculator.calculateResult());
+            System.out.println("Rezultat:" + calculator.calculateResult());
             System.out.println("Apasati 0 pentru inchiderea programului, alt key pentru a continua.");
             exp = getExpression(sc);
         } while (!exp.equals("0"));
