@@ -15,9 +15,8 @@ public class Main {
         ExpressionEvaluator calculator = new ExpressionEvaluator("0");
         String exp;
         System.out.println("""
-                Valorile trebuie sa contina o singura cifra si sa fie despartite de maxim un space,
-                operatii permise: +,-,*,/,^
-                ex: 3 + (2 - 5) - 1\s""");
+                Valorile trebuie sa contina o singura cifra, operatii permise: +,-,*,/,^
+                ex: 3 + (2 - 5) - 1");
 
         do {
             System.out.println("Introduceti expresia: ");
@@ -25,7 +24,6 @@ public class Main {
             calculator.setInput(exp);
             System.out.println(calculator.calculateResult());
             System.out.println("Apasati 0 pentru inchiderea programului, alt key pentru a continua.");
-            sc.nextLine();
             exp = getExpression(sc);
         } while (!exp.equals("0"));
 
